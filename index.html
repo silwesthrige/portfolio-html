@@ -311,6 +311,25 @@ footer{padding:40px;background:var(--bg2);border-top:1px solid var(--border);tex
   pointer-events: none;
 }
 /* Orbit rings */
+
+/* Force hero photo to top-right on desktop and prevent overlap */
+@media (min-width: 901px) {
+  /* increase right padding of hero to make room for absolute photo */
+  #hero { padding-right: 480px; }
+  .hero-photo-wrap {
+    position: absolute !important;
+    top: 120px !important;
+    right: 40px !important;
+    grid-column: auto !important;
+    align-self: start !important;
+    justify-self: end !important;
+    margin: 0 !important;
+    z-index: 60 !important;
+  }
+  .hero-photo-wrap .orbit-scene { margin: 0 !important; }
+}
+
+/* Orbit rings */
 .orbit-ring {
   position: absolute;
   top: 50%;
