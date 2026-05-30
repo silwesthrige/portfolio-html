@@ -66,11 +66,11 @@ nav.scrolled{background:rgba(5,8,15,0.85);backdrop-filter:blur(20px);border-bott
 
 /* --- HERO --- */
 #hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:100px 40px 60px;z-index:2}
-.hero-wrap{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 420px;grid-template-rows:auto auto;gap:80px;align-items:center}
-.hero-content{display:contents}
-.hero-top{grid-column:1;grid-row:1}
-.hero-bottom{grid-column:1;grid-row:2}
-.hero-photo-wrap{grid-column:2;grid-row:1/3}
+.hero-wrap{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 420px;gap:80px;align-items:center}
+.hero-content{display:flex;flex-direction:column;justify-content:center;}
+.hero-top{grid-column:1}
+.hero-bottom{grid-column:1}
+.hero-photo-wrap{grid-column:2;align-self:center}
 
 .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border:1px solid rgba(0,255,163,0.3);border-radius:2px;font-family:var(--font-mono);font-size:11px;color:var(--c3);margin-bottom:28px;animation:fadeUp 0.7s 0.2s both}
 .badge-dot{width:6px;height:6px;border-radius:50%;background:var(--c3);box-shadow:0 0 10px var(--c3);animation:blink 2s infinite}
@@ -725,27 +725,30 @@ footer{padding:40px;background:var(--bg2);border-top:1px solid var(--border);tex
       <div class="skill-group reveal reveal-delay-1">
         <div class="group-title">Frontend</div>
         <div class="skill-row"><div class="skill-meta"><span>Next.js</span><span class="pct">75%</span></div><div class="bar"><div class="bar-fill" data-width="75"></div></div></div>
-        <div class="skill-row"><div class="skill-meta"><span>React</span><span class="pct">78%</span></div><div class="bar"><div class="bar-fill" data-width="78"></div></div></div>
+        <div class="skill-row"><div class="skill-meta"><span>React.js</span><span class="pct">78%</span></div><div class="bar"><div class="bar-fill" data-width="78"></div></div></div>
         <div class="skill-row"><div class="skill-meta"><span>Flutter (Dart)</span><span class="pct">80%</span></div><div class="bar"><div class="bar-fill" data-width="80"></div></div></div>
+        <div class="skill-row"><div class="skill-meta"><span>UI / UX Design</span><span class="pct">72%</span></div><div class="bar"><div class="bar-fill" data-width="72"></div></div></div>
       </div>
       <div class="skill-group reveal reveal-delay-2">
         <div class="group-title" style="color:var(--c3)">Backend</div>
         <div class="skill-row"><div class="skill-meta"><span>Spring Boot</span><span class="pct" style="color:var(--c3)">82%</span></div><div class="bar"><div class="bar-fill" data-width="82" style="background:linear-gradient(90deg,var(--c3),#00cc82)"></div></div></div>
         <div class="skill-row"><div class="skill-meta"><span>Node.js</span><span class="pct" style="color:var(--c3)">78%</span></div><div class="bar"><div class="bar-fill" data-width="78" style="background:linear-gradient(90deg,var(--c3),#00cc82)"></div></div></div>
-        <div class="skill-row"><div class="skill-meta"><span>Firebase</span><span class="pct" style="color:var(--c3)">85%</span></div><div class="bar"><div class="bar-fill" data-width="85" style="background:linear-gradient(90deg,var(--c3),#00cc82)"></div></div></div>
+        <div class="skill-row"><div class="skill-meta"><span>Python</span><span class="pct" style="color:var(--c3)">75%</span></div><div class="bar"><div class="bar-fill" data-width="75" style="background:linear-gradient(90deg,var(--c3),#00cc82)"></div></div></div>
+        <div class="skill-row"><div class="skill-meta"><span>Java</span><span class="pct" style="color:var(--c3)">72%</span></div><div class="bar"><div class="bar-fill" data-width="72" style="background:linear-gradient(90deg,var(--c3),#00cc82)"></div></div></div>
       </div>
       <div class="skill-group reveal reveal-delay-3">
         <div class="group-title" style="color:var(--c2)">Databases</div>
         <div class="skill-row"><div class="skill-meta"><span>MySQL</span><span class="pct" style="color:var(--c2)">83%</span></div><div class="bar"><div class="bar-fill" data-width="83" style="background:linear-gradient(90deg,var(--c2),#a07ec8)"></div></div></div>
-        <div class="skill-row"><div class="skill-meta"><span>Firebase Firestore</span><span class="pct" style="color:var(--c2)">80%</span></div><div class="bar"><div class="bar-fill" data-width="80" style="background:linear-gradient(90deg,var(--c2),#a07ec8)"></div></div></div>
-        <div class="skill-row"><div class="skill-meta"><span>SQL Server</span><span class="pct" style="color:var(--c2)">75%</span></div><div class="bar"><div class="bar-fill" data-width="75" style="background:linear-gradient(90deg,var(--c2),#a07ec8)"></div></div></div>
+        <div class="skill-row"><div class="skill-meta"><span>MongoDB</span><span class="pct" style="color:var(--c2)">80%</span></div><div class="bar"><div class="bar-fill" data-width="80" style="background:linear-gradient(90deg,var(--c2),#a07ec8)"></div></div></div>
+        <div class="skill-row"><div class="skill-meta"><span>Firebase</span><span class="pct" style="color:var(--c2)">80%</span></div><div class="bar"><div class="bar-fill" data-width="80" style="background:linear-gradient(90deg,var(--c2),#a07ec8)"></div></div></div>
+        <div class="skill-row"><div class="skill-meta"><span>Oracle</span><span class="pct" style="color:var(--c2)">72%</span></div><div class="bar"><div class="bar-fill" data-width="72" style="background:linear-gradient(90deg,var(--c2),#a07ec8)"></div></div></div>
       </div>
       <div class="skill-group reveal reveal-delay-4">
-        <div class="group-title">Tools & Practices</div>
-        <div class="skill-row"><div class="skill-meta"><span>Git & GitHub</span><span class="pct">85%</span></div><div class="bar"><div class="bar-fill" data-width="85"></div></div></div>
-        <div class="skill-row"><div class="skill-meta"><span>Postman</span><span class="pct">80%</span></div><div class="bar"><div class="bar-fill" data-width="80"></div></div></div>
-        <div class="skill-row"><div class="skill-meta"><span>Agile / Scrum</span><span class="pct">72%</span></div><div class="bar"><div class="bar-fill" data-width="72"></div></div></div>
-        <div class="skill-row"><div class="skill-meta"><span>XAMPP</span><span class="pct">75%</span></div><div class="bar"><div class="bar-fill" data-width="75"></div></div></div>
+        <div class="group-title">Cloud & Tools</div>
+        <div class="skill-row"><div class="skill-meta"><span>Vercel</span><span class="pct">78%</span></div><div class="bar"><div class="bar-fill" data-width="78"></div></div></div>
+        <div class="skill-row"><div class="skill-meta"><span>Railway</span><span class="pct">72%</span></div><div class="bar"><div class="bar-fill" data-width="72"></div></div></div>
+        <div class="skill-row"><div class="skill-meta"><span>Docker</span><span class="pct">74%</span></div><div class="bar"><div class="bar-fill" data-width="74"></div></div></div>
+        <div class="skill-row"><div class="skill-meta"><span>Git & Postman</span><span class="pct">85%</span></div><div class="bar"><div class="bar-fill" data-width="85"></div></div></div>
       </div>
     </div>
   </div>
@@ -767,12 +770,12 @@ footer{padding:40px;background:var(--bg2);border-top:1px solid var(--border);tex
           <div class="proj-type">Full Stack Application · Jul – Aug 2025</div>
           <h3 class="proj-title">The Turmeric Indian Cuisine</h3>
         </div>
-        <p class="proj-desc">A complete restaurant management system with separate apps for customers, drivers, and administrators — providing a seamless online food ordering experience.</p>
+        <p class="proj-desc">A restaurant management system with separate mobile apps for customers, drivers, and a web admin portal — designed for a seamless online food ordering experience.</p>
         <ul class="proj-highlights">
-          <li>System design & architecture across 3 platforms</li>
-          <li>UI/UX across customer, driver & admin apps</li>
-          <li>Firebase database integration & real-time updates</li>
-          <li>Multi-role app management system</li>
+          <li>Designed and built customer, driver, and admin platforms.</li>
+          <li>Led UI/UX development across Flutter and web interfaces.</li>
+          <li>Integrated Firebase for real-time order updates and authentication.</li>
+          <li>Delivered a complete multi-role food service ecosystem.</li>
         </ul>
         <div class="proj-tech">
           <span class="tech-pill">Flutter</span><span class="tech-pill">PHP</span><span class="tech-pill">Firebase</span><span class="tech-pill">Dart</span>
@@ -792,10 +795,12 @@ footer{padding:40px;background:var(--bg2);border-top:1px solid var(--border);tex
           <div class="proj-type">Enterprise Web App · 2025</div>
           <h3 class="proj-title">Petshop Management System</h3>
         </div>
-        <p class="proj-desc">A secure, scalable web application replacing manual pet shop processes — improving operational efficiency through modern full-stack architecture.</p>
+        <p class="proj-desc">A secure, scalable web app that replaces manual pet shop tasks with a modern full-stack solution to improve efficiency and reduce errors.</p>
         <ul class="proj-highlights">
-          <li>React + Spring Boot integration</li>
-          <li>JWT authentication & secure REST API</li>
+          <li>Developed frontend and backend features with React and Spring Boot.</li>
+          <li>Implemented JWT authentication and secure REST APIs.</li>
+          <li>Integrated MySQL to manage inventory, billing, and customer data.</li>
+          <li>Designed workflows to streamline daily pet shop operations.</li>
         </ul>
         <div class="proj-tech">
           <span class="tech-pill">React</span><span class="tech-pill">Spring Boot</span><span class="tech-pill">JWT</span><span class="tech-pill">MySQL</span>
@@ -814,10 +819,11 @@ footer{padding:40px;background:var(--bg2);border-top:1px solid var(--border);tex
           <div class="proj-type">Desktop Application · Apr – May 2025</div>
           <h3 class="proj-title">Hotel Management System</h3>
         </div>
-        <p class="proj-desc">A Windows-based hotel management app automating room booking, billing, and customer management operations.</p>
+        <p class="proj-desc">A Windows hotel management app that automates room booking, billing, and customer management through an intuitive desktop experience.</p>
         <ul class="proj-highlights">
-          <li>UI design & core logic development</li>
-          <li>Database integration & billing automation</li>
+          <li>Built UI and core logic using C# and .NET.</li>
+          <li>Automated billing, reservation, and guest tracking workflows.</li>
+          <li>Integrated SQL Server for reliable data storage and reporting.</li>
         </ul>
         <div class="proj-tech">
           <span class="tech-pill">C#</span><span class="tech-pill">.NET</span><span class="tech-pill">SQL Server</span>
@@ -837,11 +843,11 @@ footer{padding:40px;background:var(--bg2);border-top:1px solid var(--border);tex
           <h3 class="proj-title">Assistive Service Robot</h3>
           <div class="proj-badge">🏆 1st Place — University Competition</div>
         </div>
-        <p class="proj-desc">A smart robot for elderly assistance and safety monitoring with obstacle detection, robotic arm control, and live camera feed.</p>
+        <p class="proj-desc">A smart elderly-care robot with obstacle detection, camera vision, and a mobile remote-control interface.</p>
         <ul class="proj-highlights">
-          <li>Obstacle detection via ultrasonic sensors</li>
-          <li>4-servo robotic arm + ESP32-CAM vision</li>
-          <li>Mobile remote control via Blynk</li>
+          <li>Integrated ESP32 + ESP32-CAM for live vision and control.</li>
+          <li>Built a Flutter mobile app for remote monitoring and actuation.</li>
+          <li>Implemented YOLO-based object detection for environment awareness.</li>
         </ul>
         <div class="proj-tech">
           <span class="tech-pill">ESP32</span><span class="tech-pill">Computer Vision</span><span class="tech-pill">C++</span><span class="tech-pill">Blynk</span>
@@ -854,7 +860,6 @@ footer{padding:40px;background:var(--bg2);border-top:1px solid var(--border);tex
         </div>
       </div>
 
-
       <div class="project-card reveal reveal-delay-4">
         <div class="proj-num">05</div>
         <div>
@@ -862,11 +867,11 @@ footer{padding:40px;background:var(--bg2);border-top:1px solid var(--border);tex
           <h3 class="proj-title">Smart Job Matching App</h3>
           <div class="proj-badge" style="background:rgba(0,255,163,0.08);border-color:rgba(0,255,163,0.25);color:var(--c3)">🤖 AI-Powered · In Progress</div>
         </div>
-        <p class="proj-desc">An AI-powered recruitment & career recommendation platform with intelligent job matching, resume analysis, and skill-based matching functionalities.</p>
+        <p class="proj-desc">An AI-backed career platform that matches candidates to jobs using resume analysis, skills extraction, and intelligent recommendations.</p>
         <ul class="proj-highlights">
-          <li>AI-driven job matching & career recommendations</li>
-          <li>Resume analysis with skill extraction engine</li>
-          <li>Scalable backend APIs with machine learning models</li>
+          <li>Building resume analysis and skill extraction features.</li>
+          <li>Developing AI-driven job matching and recommendation logic.</li>
+          <li>Implementing scalable backend APIs with FastAPI and PostgreSQL.</li>
         </ul>
         <div class="proj-tech">
           <span class="tech-pill">React.js</span><span class="tech-pill">FastAPI</span><span class="tech-pill">PostgreSQL</span><span class="tech-pill">Machine Learning</span><span class="tech-pill">Python</span>
