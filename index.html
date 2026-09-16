@@ -246,6 +246,7 @@ section{padding:100px 40px;position:relative;z-index:2}
 .edu-uni{font-size:15px;font-weight:600;color:var(--text);margin-bottom:4px}
 .edu-aff{font-family:var(--font-mono);font-size:11px;color:var(--text3);margin-bottom:14px}
 .edu-desc{font-size:14px;color:var(--text2);line-height:1.75}
+.edu-col{display:flex;flex-direction:column;gap:24px}
 .refs-card{padding:28px;background:var(--surface);border:1px solid var(--border);border-radius:4px}
 .refs-title{font-family:var(--font-mono);font-size:11px;color:var(--c1);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:20px}
 .ref-item{padding:16px;background:var(--surface2);border:1px solid var(--border);border-radius:4px;margin-bottom:10px}
@@ -1052,17 +1053,29 @@ footer{padding:40px;background:var(--bg2);border-top:1px solid var(--border);tex
       <h2 class="section-title">EDUCATION</h2>
     </div>
     <div class="edu-grid">
-      <div class="edu-card reveal reveal-delay-1">
-        <div class="edu-icon">🎓</div>
-        <div>
-          <div class="edu-year">// 2nd Year · Ongoing</div>
-          <div class="edu-degree">BSc (Hons) in Computing</div>
-          <div class="edu-uni">NIBM — National Institute of Business Management</div>
-          <div class="edu-aff">Affiliated with Coventry University, UK</div>
-          <p class="edu-desc">Studying Software Engineering with a focus on backend systems, object-oriented programming, databases, and agile software development practices.</p>
+      <div class="edu-col">
+        <div class="edu-card reveal reveal-delay-1">
+          <div class="edu-icon">🎓</div>
+          <div>
+            <div class="edu-year">// 2025 – 2026 · 2nd Year · Ongoing</div>
+            <div class="edu-degree">HND in Software Engineering</div>
+            <div class="edu-uni">NIBM — National Institute of Business Management</div>
+            <div class="edu-aff">BSc (Hons) Computer Science with Software Engineering · Coventry University, UK (Affiliated)</div>
+            <p class="edu-desc">Studying Software Engineering with a focus on backend systems, object-oriented programming, databases, and agile software development practices.</p>
+          </div>
+        </div>
+        <div class="edu-card reveal reveal-delay-2">
+          <div class="edu-icon">📘</div>
+          <div>
+            <div class="edu-year">// 2024 – 2025 · 1st Year · Completed</div>
+            <div class="edu-degree">Diploma in Software Engineering</div>
+            <div class="edu-uni">NIBM — National Institute of Business Management</div>
+            <div class="edu-aff">BSc (Hons) Computer Science with Software Engineering · Coventry University, UK (Affiliated)</div>
+            <p class="edu-desc">Built a foundation in programming, databases, and core software development principles as the first year of the BSc (Hons) Computer Science with Software Engineering pathway.</p>
+          </div>
         </div>
       </div>
-      <div class="refs-card reveal reveal-delay-2">
+      <div class="refs-card reveal reveal-delay-3">
         <div class="refs-title">// References</div>
         <div class="ref-item">
           <div class="ref-name">Sujani Mahawatta</div>
