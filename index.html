@@ -227,6 +227,13 @@ section{padding:100px 40px;position:relative;z-index:2}
 .proj-link:hover{opacity:0.6}
 .proj-role{font-family:var(--font-mono);font-size:11px;color:var(--text3)}
 .proj-role span{color:var(--c2)}
+.proj-filter-bar{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:40px}
+.filter-btn{padding:9px 20px;background:var(--surface);border:1px solid var(--border);border-radius:20px;font-family:var(--font-mono);font-size:12px;letter-spacing:0.05em;color:var(--text2);cursor:pointer;transition:all 0.25s;-webkit-tap-highlight-color:transparent}
+.filter-btn:hover{border-color:var(--border2);color:var(--text)}
+.filter-btn.active{background:rgba(0,200,255,0.1);border-color:var(--c1);color:var(--c1)}
+.filter-count{margin-left:6px;opacity:0.6;font-size:10px}
+.project-card.filtered-out{display:none}
+.proj-badge-client{background:rgba(0,200,255,0.08);border-color:rgba(0,200,255,0.25);color:var(--c1)}
 
 /* --- EDUCATION --- */
 #education{background:var(--bg)}
@@ -706,7 +713,7 @@ footer{padding:40px;background:var(--bg2);border-top:1px solid var(--border);tex
         </a>
       </div>
       <div class="stats-bar">
-        <div class="stat-item"><div class="stat-num" data-count="5">0</div><div class="stat-lbl">Projects</div></div>
+        <div class="stat-item"><div class="stat-num" data-count="9">0</div><div class="stat-lbl">Projects</div></div>
         <div class="stat-item"><div class="stat-num" data-count="1">0</div><div class="stat-lbl">1st Place</div></div>
         <div class="stat-item"><div class="stat-num" data-count="2">0</div><div class="stat-lbl">Year</div></div>
         <div class="stat-item"><div class="stat-num" data-count="3">0</div><div class="stat-lbl">Languages</div></div>
@@ -818,83 +825,85 @@ footer{padding:40px;background:var(--bg2);border-top:1px solid var(--border);tex
     <div class="reveal">
       <div class="section-eyebrow">Work</div>
       <h2 class="section-title">PROJECTS</h2>
-      <p style="font-size:16px;color:var(--text2);margin-bottom:56px">Real-world applications spanning mobile, web, desktop, and hardware.</p>
+      <p style="font-size:16px;color:var(--text2);margin-bottom:32px">9 real-world builds — including two live client platforms — spanning web, mobile, AI, and IoT.</p>
+    </div>
+    <div class="proj-filter-bar reveal">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="mobile">Mobile</button>
+      <button class="filter-btn" data-filter="iot">IoT & Robotics</button>
+      <button class="filter-btn" data-filter="ai">AI / ML</button>
+      <button class="filter-btn" data-filter="desktop">Desktop</button>
     </div>
     <div class="projects-grid">
 
-      <div class="project-card featured reveal">
+      <div class="project-card featured reveal" data-category="web">
         <div class="proj-num">01</div>
         <div>
-          <div class="proj-type">Full Stack Application · Jul – Aug 2025</div>
-          <h3 class="proj-title">The Turmeric Indian Cuisine</h3>
+          <div class="proj-type">Hotel Reservation Platform · Aug 2026 – Present</div>
+          <h3 class="proj-title">Ayur Beach Villa</h3>
+          <div class="proj-badge proj-badge-client">💼 Live Client Project</div>
         </div>
-        <p class="proj-desc">A restaurant management system with separate mobile apps for customers, drivers, and a web admin portal — designed for a seamless online food ordering experience.</p>
+        <p class="proj-desc">A real-client hotel reservation and management platform with online booking, payment processing, content management, and an admin dashboard for running day-to-day hotel operations.</p>
         <ul class="proj-highlights">
-          <li>Designed and built customer, driver, and admin platforms.</li>
-          <li>Led UI/UX development across Flutter and web interfaces.</li>
-          <li>Integrated Firebase for real-time order updates and authentication.</li>
-          <li>Delivered a complete multi-role food service ecosystem.</li>
+          <li>Built the customer-facing booking flow with real-time availability and online payments.</li>
+          <li>Developed an admin dashboard for managing reservations, rooms, and site content.</li>
+          <li>Designed REST APIs connecting the Next.js frontend to a Laravel/PHP backend.</li>
+          <li>Currently in active development and deployment for a real hospitality client.</li>
         </ul>
         <div class="proj-tech">
-          <span class="tech-pill">Flutter</span><span class="tech-pill">PHP</span><span class="tech-pill">Firebase</span><span class="tech-pill">Dart</span>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
-          <div class="proj-role">Role: <span>Lead Developer</span></div>
-          <div class="proj-links">
-            <a href="https://github.com/silwesthrige/tumeric-cuisine" class="proj-link" target="_blank">↗ GitHub</a>
-            <a href="https://linkedin.com/in/vishwa-roshel-288015320" class="proj-link" target="_blank">↗ LinkedIn</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card reveal reveal-delay-1">
-        <div class="proj-num">02</div>
-        <div>
-          <div class="proj-type">Enterprise Web App · 2025</div>
-          <h3 class="proj-title">Petshop Management System</h3>
-        </div>
-        <p class="proj-desc">A secure, scalable web app that replaces manual pet shop tasks with a modern full-stack solution to improve efficiency and reduce errors.</p>
-        <ul class="proj-highlights">
-          <li>Developed frontend and backend features with React and Spring Boot.</li>
-          <li>Implemented JWT authentication and secure REST APIs.</li>
-          <li>Integrated MySQL to manage inventory, billing, and customer data.</li>
-          <li>Designed workflows to streamline daily pet shop operations.</li>
-        </ul>
-        <div class="proj-tech">
-          <span class="tech-pill">React</span><span class="tech-pill">Spring Boot</span><span class="tech-pill">JWT</span><span class="tech-pill">MySQL</span>
+          <span class="tech-pill">Next.js</span><span class="tech-pill">Laravel</span><span class="tech-pill">PHP</span><span class="tech-pill">MySQL</span><span class="tech-pill">REST API</span>
         </div>
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
           <div class="proj-role">Role: <span>Full-Stack Developer</span></div>
-          <div class="proj-links">
-            <a href="https://github.com/silwesthrige/petshop-system" class="proj-link" target="_blank">↗ GitHub</a>
-          </div>
         </div>
       </div>
 
-      <div class="project-card reveal reveal-delay-2">
-        <div class="proj-num">03</div>
+      <div class="project-card reveal reveal-delay-1" data-category="web">
+        <div class="proj-num">02</div>
         <div>
-          <div class="proj-type">Desktop Application · Apr – May 2025</div>
-          <h3 class="proj-title">Hotel Management System</h3>
+          <div class="proj-type">Workshop Management System · Sep 2026</div>
+          <h3 class="proj-title">Asiri Super Motors</h3>
+          <div class="proj-badge proj-badge-client">💼 Live Client Project</div>
         </div>
-        <p class="proj-desc">A Windows hotel management app that automates room booking, billing, and customer management through an intuitive desktop experience.</p>
+        <p class="proj-desc">A live, real-client automotive workshop system for managing customers, vehicles, service records, repairs, and billing end-to-end.</p>
         <ul class="proj-highlights">
-          <li>Built UI and core logic using C# and .NET.</li>
-          <li>Automated billing, reservation, and guest tracking workflows.</li>
-          <li>Integrated SQL Server for reliable data storage and reporting.</li>
+          <li>Built customer, vehicle, and service-record management modules.</li>
+          <li>Designed a PostgreSQL schema via Supabase for repairs and billing data.</li>
+          <li>Implemented REST APIs powering real-time workshop operations.</li>
+          <li>Delivered a responsive web app used daily by a real automotive workshop.</li>
         </ul>
         <div class="proj-tech">
-          <span class="tech-pill">C#</span><span class="tech-pill">.NET</span><span class="tech-pill">SQL Server</span>
+          <span class="tech-pill">Next.js</span><span class="tech-pill">Supabase</span><span class="tech-pill">PostgreSQL</span><span class="tech-pill">REST API</span>
         </div>
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
-          <div class="proj-role">Role: <span>Developer</span></div>
-          <div class="proj-links">
-            <a href="https://github.com/silwesthrige/hotel-management" class="proj-link" target="_blank">↗ GitHub</a>
-          </div>
+          <div class="proj-role">Role: <span>Full-Stack Developer</span></div>
         </div>
       </div>
 
-      <div class="project-card reveal reveal-delay-3">
+      <div class="project-card reveal reveal-delay-2" data-category="iot ai mobile">
+        <div class="proj-num">03</div>
+        <div>
+          <div class="proj-type">Healthcare Automation · Jul 2026</div>
+          <h3 class="proj-title">SmartDose</h3>
+          <div class="proj-badge" style="background:rgba(0,255,163,0.08);border-color:rgba(0,255,163,0.25);color:var(--c3)">🤖 AI-Powered</div>
+        </div>
+        <p class="proj-desc">An AI-powered healthcare solution that automates medicine delivery, patient verification, and inventory monitoring through a smart robot and a real-time management platform.</p>
+        <ul class="proj-highlights">
+          <li>Built a Flutter app for patient verification and delivery scheduling.</li>
+          <li>Programmed ESP32-based robot hardware for automated medicine dispensing.</li>
+          <li>Developed a web dashboard for real-time inventory monitoring.</li>
+          <li>Applied machine learning to patient and medicine verification logic.</li>
+        </ul>
+        <div class="proj-tech">
+          <span class="tech-pill">Flutter</span><span class="tech-pill">Firebase</span><span class="tech-pill">ESP32</span><span class="tech-pill">Machine Learning</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+          <div class="proj-role">Role: <span>Full-Stack & Hardware Developer</span></div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-3" data-category="iot">
         <div class="proj-num">04</div>
         <div>
           <div class="proj-type">IoT · Hardware+Software · Dec 2025 – Jan 2026</div>
@@ -918,8 +927,101 @@ footer{padding:40px;background:var(--bg2);border-top:1px solid var(--border);tex
         </div>
       </div>
 
-      <div class="project-card reveal reveal-delay-4">
+      <div class="project-card reveal reveal-delay-4" data-category="mobile">
         <div class="proj-num">05</div>
+        <div>
+          <div class="proj-type">Mobile App Development · Jul – Aug 2025</div>
+          <h3 class="proj-title">TrailVerse</h3>
+        </div>
+        <p class="proj-desc">A community-driven Android travel discovery app that lets users find, share, and rate hidden travel locations through crowdsourced content, live voting, and interactive maps.</p>
+        <ul class="proj-highlights">
+          <li>Built with Kotlin and Jetpack Compose using an MVVM architecture.</li>
+          <li>Integrated Google Maps API for interactive location discovery.</li>
+          <li>Implemented live voting and crowdsourced content with Firebase.</li>
+          <li>Used Cloudinary for optimized image storage and delivery.</li>
+        </ul>
+        <div class="proj-tech">
+          <span class="tech-pill">Kotlin</span><span class="tech-pill">Jetpack Compose</span><span class="tech-pill">Firebase</span><span class="tech-pill">Google Maps API</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+          <div class="proj-role">Role: <span>Android Developer</span></div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-1" data-category="mobile web">
+        <div class="proj-num">06</div>
+        <div>
+          <div class="proj-type">Full Stack Application · Jul – Aug 2025</div>
+          <h3 class="proj-title">The Turmeric Indian Cuisine</h3>
+        </div>
+        <p class="proj-desc">A restaurant management system with separate mobile apps for customers, drivers, and a web admin portal — designed for a seamless online food ordering experience.</p>
+        <ul class="proj-highlights">
+          <li>Designed and built customer, driver, and admin platforms.</li>
+          <li>Led UI/UX development across Flutter and web interfaces.</li>
+          <li>Integrated Firebase for real-time order updates and authentication.</li>
+          <li>Delivered a complete multi-role food service ecosystem.</li>
+        </ul>
+        <div class="proj-tech">
+          <span class="tech-pill">Flutter</span><span class="tech-pill">PHP</span><span class="tech-pill">Firebase</span><span class="tech-pill">Dart</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+          <div class="proj-role">Role: <span>Lead Developer</span></div>
+          <div class="proj-links">
+            <a href="https://github.com/silwesthrige/tumeric-cuisine" class="proj-link" target="_blank">↗ GitHub</a>
+            <a href="https://linkedin.com/in/vishwa-roshel-288015320" class="proj-link" target="_blank">↗ LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-2" data-category="web">
+        <div class="proj-num">07</div>
+        <div>
+          <div class="proj-type">Enterprise Web App · 2025</div>
+          <h3 class="proj-title">Petshop Management System</h3>
+        </div>
+        <p class="proj-desc">A secure, scalable web app that replaces manual pet shop tasks with a modern full-stack solution to improve efficiency and reduce errors.</p>
+        <ul class="proj-highlights">
+          <li>Developed frontend and backend features with React and Spring Boot.</li>
+          <li>Implemented JWT authentication and secure REST APIs.</li>
+          <li>Integrated MySQL to manage inventory, billing, and customer data.</li>
+          <li>Designed workflows to streamline daily pet shop operations.</li>
+        </ul>
+        <div class="proj-tech">
+          <span class="tech-pill">React</span><span class="tech-pill">Spring Boot</span><span class="tech-pill">JWT</span><span class="tech-pill">MySQL</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+          <div class="proj-role">Role: <span>Full-Stack Developer</span></div>
+          <div class="proj-links">
+            <a href="https://github.com/silwesthrige/petshop-system" class="proj-link" target="_blank">↗ GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-3" data-category="desktop">
+        <div class="proj-num">08</div>
+        <div>
+          <div class="proj-type">Desktop Application · Apr – May 2025</div>
+          <h3 class="proj-title">Hotel Management System</h3>
+        </div>
+        <p class="proj-desc">A Windows hotel management app that automates room booking, billing, and customer management through an intuitive desktop experience.</p>
+        <ul class="proj-highlights">
+          <li>Built UI and core logic using C# and .NET.</li>
+          <li>Automated billing, reservation, and guest tracking workflows.</li>
+          <li>Integrated SQL Server for reliable data storage and reporting.</li>
+        </ul>
+        <div class="proj-tech">
+          <span class="tech-pill">C#</span><span class="tech-pill">.NET</span><span class="tech-pill">SQL Server</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+          <div class="proj-role">Role: <span>Developer</span></div>
+          <div class="proj-links">
+            <a href="https://github.com/silwesthrige/hotel-management" class="proj-link" target="_blank">↗ GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-4" data-category="ai web">
+        <div class="proj-num">09</div>
         <div>
           <div class="proj-type">AI Platform · Ongoing · 2026</div>
           <h3 class="proj-title">Smart Job Matching App</h3>
@@ -1236,6 +1338,21 @@ document.querySelectorAll('.skill-row').forEach(row => {
   row.addEventListener('mouseleave', () => {
     const fill = row.querySelector('.bar-fill');
     if (fill) fill.style.boxShadow = '';
+  });
+});
+
+// ===== PROJECT FILTER =====
+const filterBtns = document.querySelectorAll('.filter-btn');
+const projCards = document.querySelectorAll('.project-card');
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    projCards.forEach(card => {
+      const cats = (card.dataset.category || '').split(' ');
+      card.classList.toggle('filtered-out', !(f === 'all' || cats.includes(f)));
+    });
   });
 });
 
